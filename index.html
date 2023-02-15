@@ -1,112 +1,165 @@
-<!DOCTYPE html>
-<html lang="ko">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&display=swap"
+        rel="stylesheet">
 
-		<meta property="og:type" />
-		<meta property="og:site_name" />
-		<meta property="og:title" />
-		<meta property="og:description" />
-		<meta property="og:image" />
+    <link rel="icon"
+        href="https://user-images.githubusercontent.com/16946573/144957680-01ea405e-959b-46b1-a163-df688466ac23.png" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&display=swap');
 
-		<title></title>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
 
-		<link rel="stylesheet" />
+        .banner {
+            background-color: black;
+            color: aliceblue;
+            height: 200px;
+            width: 600px;
+        }
 
-		<link rel="icon" />
-	</head>
-	<body>
-		<div class="container">
-			<header class="bootstrap-header lh-1 py-3">
-				<div class="row flex-nowrap justify-content-between align-items-center">
-					<h1 class="text-left">
-						<a class="bootstrap-header-logo text-dark" href="#"
-							>안녕하세요. 반갑습니다</a
-						>👋
-					</h1>
-				</div>
-			</header>
-		</div>
+        .title {
+            padding-top: 25px;
+            padding-left: 20px;
+        }
 
-		<main class="container">
-			<div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
-				<div class="col-md-6 px-0">
-					<h1 class="display-7">
-						Bootstrap을 활용해 퍼스널 브랜딩 페이지 만들기
-					</h1>
-					<p class="lead my-3">
-						다양한 태그와 라이브러리를 사용하여 자유롭게 표현해보세요
-					</p>
-				</div>
-			</div>
+        .subtitle {
+            padding-top: 10px;
+            padding-left: 20px;
+        }
 
-			<div class="row mb-2">
-				<div class="col-md-4">
-					<div
-						class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-100 position-relative"
-					>
-						<div class="col p-4 d-flex flex-column position-static">
-							<h3 class="mb-0">경력</h3>
-							<a class="stretched-link">자세히 보기</a>
-						</div>
-					</div>
-				</div>
-			</div>
+        .left-container {
+            width: 600px;
+            clear: both;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-			<div class="row g-5">
-				<div class="col-md-8">
-					<article id="experience" class="bootstrap-post">
-						<h2 class="bootstrap-post-title mb-1">🧳 경력</h2>
-					</article>
+        .main-menu {
+            clear: both;
+            flex-direction: center;
+            width: 600px;
+            justify-content: space-between;
+        }
 
-					<article id="hobby" class="bootstrap-post">
-						<h2 class="bootstrap-post-title mb-1">🧗🏻‍♀️ 취미</h2>
-					</article>
+        .m-menu {
+            border: 1px solid rgb(141, 141, 141);
+            margin: 20px;
+        }
 
-					<article id="etc" class="bootstrap-post">
-						<h2 class="bootstrap-post-title mb-1">😀 기타</h2>
-						<h3>아직 더 표현하고 싶은게 있으신가요?</h3>
-						<p>아직도<mark>다양한 태그</mark>들이 남았답니다.</p>
-						<p>
-							<a
-								href="https://developer.mozilla.org/ko/docs/Web/HTML/Element"
-								target="_blank"
-								>여기에서</a
-							>
-							더 다양한 태그들을 확인해보시고 간단하게 사용해보세요
-						</p>
-						<p>
-							이미 만들어진 간단한 부트스트랩 스타일을 사용하고 싶다면?
-							<a href="https://getbootstrap.com" target="_blank">
-								부스트스트랩 문서를 참고해보세요
-							</a>
-						</p>
-					</article>
-				</div>
+        .header {
+            position: fixed;
+            flex-direction: row;
+            justify-content: left;
+            top: 0;
+            background-color: rgb(208, 208, 208);
+        }
 
-				<div class="col-md-4">
-					<div class="position-sticky" style="top: 2rem">
-						<div class="p-4 mb-3 bg-light rounded">
-							<h4>About</h4>
-						</div>
+        .h-menu {
+            padding: 2px;
+            padding-left: 5;
+        }
+    </style>
+</head>
 
-						<div class="p-4">
-							<h4>Social</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
+<body>
 
-		<footer class="bootstrap-footer">
-			<p>
-				template built for
-				<a href="https://getbootstrap.com/">Bootstrap</a>
-			</p>
-			<p>
-				<a href="#">Back to top</a>
-			</p>
-		</footer>
-	</body>
-</html>
+    <div class="header left-container">
+        <span class="h-menu"><a href="#pos1">경력</a></span>
+        <span class="h-menu"><a href="#pos2">취미</a></span>
+        <span class="h-menu"><a href="#pos3">기타</a></span>
+    </div>
+    <div class="banner">
+        <h1 class="title">
+            Bootstrap을 활용해 퍼스널 <br> 브랜딩 페이지 만들기
+        </h1>
+        <p class="subtitle">
+            다양한 태그와 라이브러리를 사용하여 자유롭게 표현해보세요
+        </p>
+    </div>
+
+    <div class="left-container">
+
+        <div class="main-menu">
+            <span class="m-menu"><a href="#pos1">경력</a></span>
+            <span class="m-menu"><a href="#pos2">취미</a></span>
+            <span class="m-menu"><a href="#pos3">기타</a></span>
+        </div>
+
+
+        <div class="article">
+            <div class="a1">
+                <div id="pos1">
+                    <h2>🧳 경력</h2>
+
+                </div>
+                <h3>리스트 사용하기</h3>
+                <h4>UL을 활용하여 리스트를 표현해보세요</h4>
+                <ul>
+                    <li>첫번째</li>
+                    <li>두번째</li>
+                    <li>세번째</li>
+                </ul>
+                <h4>OL을 활용하여 리스트를 표현해보세요</h4>
+
+                <ol>
+                    <li>첫번째</li>
+                    <li>두번째</li>
+                    <li>세번째</li>
+                </ol>
+
+                <h4>DL을 활용하여 리스트를 표현해보세요</h4>
+                <DL>
+                    <strong>HyperText Markup Language (HTML)</strong>
+                    <dt>HTML이란?</dt>
+                </DL>
+                <DL>
+                    <strong>Cascading Style Sheets (CSS)</strong>
+                    <dt>CSS란?</dt>
+                </DL>
+                <DL>
+                    <strong>JavaScript (JS)</strong>
+                    <dt>JS란?</dt>
+                </DL>
+
+            </div>
+
+            <div id="pos2">
+                <h2>🧗🏻‍♀️ 취미</h2>
+            </div>
+            <h2>헤딩 활용하기</h2>
+            <div>div 요소는 플로우 콘텐츠를 위한 통용 컨테이너입니다.
+                CSS로 꾸미기 전에는 콘텐츠나 레이웃에 어떤 영향도 주지 않습니다.</div>
+            <h2>서브 헤딩</h2>
+            <div>p요소는 하나의 문단을 나타냅니다. 시각적인 매체에서, 문단은 보통 인접 블록과의 여백과 첫 줄의 들여쓰기로 구분하지만,
+                HTML에서 문단은 이미지나 입력 폼 등 서로 관련있는 콘텐츠 무엇이나 될 수 있습니다.
+            </div>
+            <div id="pos3">
+                <h2>😀 기타</h2>
+            </div>
+
+            <h2>아직 더 표현하고 싶은게 있으신가요?</h2>
+            <div>아직도 다양한 태그들이 남았답니다.</div>
+            <div>여기에서 다양한 태그들을 확인해보시고 간단하게 사용해보세요</div>
+            <div>이미 만들어진 간단한 부트스트랩 스타일을 사용하고 싶다면?
+                부트스트랩 문서를 참고해보세요
+            </div>
+        </div>
+
+    </div>
+
+    <div class="right-container">
+        <div>
+            <h3>Social</h3>
+            <a href="https://wwww.facebooklab.co.kr">페이스북</a>
+            <a href="https://about.instagram.com/ko-kr">인스타그램</a>
+            <a href="mailto:vividlovely@naver.com?subject=test">메일보내기</a>
+            <a href="tel:01088920448">전화 걸기</a>
+        </div>
+    </div>
+
+
+</body>
